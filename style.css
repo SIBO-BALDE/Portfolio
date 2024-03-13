@@ -4,10 +4,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
 
-*{
-    outline: red;
+/* *{
+    outline: 1px solid red;
     
- }
+ } */
+
+ html {
+    scroll-behavior: smooth;
+  }
+  .about{
+    line-height:25px
+  }
+  .heading{
+    margin-bottom: 15px;
+
+  }
+  a{
+    cursor: pointer;
+    text-decoration: none;
+  }
 
 *{
     padding: 0px;
@@ -283,6 +298,30 @@ header{
 .services-box i {
     font-size: 4rem;
     color: var(--seconde-color);
+}
+.content-flexible-contact{
+    display: flex;
+    justify-content: center;
+}
+.icons-contact{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--firster-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.icons-contact i{
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+.typescripte{
+    font-size: 4rem;
+    color: var(--seconde-color);
+
 }
 
 .services-container h3 {
