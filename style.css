@@ -50,12 +50,13 @@ header{
     left: 0;
     width: 100%;
     padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   
     background-color: #fff;
-    /* z-index: 100; */
+   
 }
+/*  display: flex;
+    justify-content: space-between;
+    align-items: center; */
 
 .logo{
     font-size: 2em;
@@ -64,7 +65,7 @@ header{
 }
 
 .navigation{
-    margin-left: -300px;
+    margin-left:500px;
     font-weight: bolder;
     font-size: 0.7em;
     background-color: #fff;
@@ -89,6 +90,9 @@ header{
 }
 .logo span{
     color: #180863;
+}
+.logo{
+    color: #269ca0;
 }
   /* *************Home******************* */
 
@@ -472,6 +476,10 @@ color: var(--second-bg-color);
  *{
     outline: red;
  }
+ .navigation2{
+    display: block;
+    justify-content: center;
+ }
 
  /* *************Footer******************* */
 
@@ -480,7 +488,11 @@ color: var(--second-bg-color);
     text-align: center;
  }
  
-  /* *************sections******************* */
+  /* *************Medias queries******************* */
+  @media screen  and (max-width: 768px){
+
+    
+  }
 
 
  

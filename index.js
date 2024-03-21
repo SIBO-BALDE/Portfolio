@@ -6,7 +6,7 @@ const typewriter = new Typewriter(textAnime, {
     loop: true, // Si vous souhaitez que l'animation se répète
 });
 
-typewriter.typeString("Développeuse JavaScript FullStack")
+typewriter.typeString("Full Stack JavaScript Developer")
     .pauseFor(300)
     .deleteAll() // Supprime le texte actuel
     // .typeString("Nouveau texte à animer")
