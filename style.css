@@ -353,12 +353,27 @@ header{
     margin-bottom: 4rem;
 }
 
+
 .portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem; 
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+  }
+  .portfolio-box{
+    width: 30rem;
+    height: 20rem;
+    flex:  1 1 20rem;
+    padding: 0.4rem 0.1rem 0.9rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: .5s ease;
+    
+  }
 
 .portfolio-container .portfolio-box {
     position: relative;
@@ -489,7 +504,68 @@ color: var(--second-bg-color);
  }
  
   /* *************Medias queries******************* */
-  @media screen  and (max-width: 768px){
+  @media screen  and (max-width: 1015px){
+    .about{
+        flex-wrap: wrap;
+    }
+    .about-content{
+        padding: 0 10px;
+    }
+    .navigation{
+        margin-left: 0;
+    }
+    header{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 30px 50px;
+       
+        background-color: #fff;
+       
+    }
+    .content {
+        padding: 10px 20px ; 
+    }
+    .img-container img{
+        width: 260px;
+        height: 250px;
+        border-radius: 50%;
+        border: 0.8rem solid #fff;
+       
+    }
+    .img-container{
+    
+        margin-top: 10%;
+        margin-left: 200px;
+        width: 260px;
+        height: 250px;
+        border-radius: 50%;
+        border: 0.4rem solid var(--firster-color);
+        
+        
+        
+    }
+
+    
+  }
+  @media screen  and (max-width: 500px){
+    .logo{
+        font-size: 30px;
+        color: #555;
+        cursor: default;
+       float: left;
+    }
+    header{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 30px 20px;
+       
+        background-color: #fff;
+       
+    }
 
     
   }
