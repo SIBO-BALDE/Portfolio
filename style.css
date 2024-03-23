@@ -54,9 +54,7 @@ header{
     background-color: #fff;
    
 }
-/*  display: flex;
-    justify-content: space-between;
-    align-items: center; */
+
 
 .logo{
     font-size: 2em;
@@ -508,6 +506,12 @@ color: var(--second-bg-color);
     .about{
         flex-wrap: wrap;
     }
+    .greetings{
+        font-size: 35px !important;
+    }
+    .animationBalise{
+        font-size: 25px;
+    }
     .about-content{
         padding: 0 10px;
     }
@@ -525,7 +529,7 @@ color: var(--second-bg-color);
        
     }
     .content {
-        padding: 10px 20px ; 
+        padding: 10px 32px ; 
     }
     .img-container img{
         width: 260px;
@@ -547,6 +551,34 @@ color: var(--second-bg-color);
         
     }
 
+    .btn-group a{
+        width: 100%;
+
+    }
+    .btn-group{
+        width: 100%;
+    }
+    .about-img {
+        margin-top: 3%;
+        margin-left: 0px;
+        width: 230px;
+        height: 220px;
+        border-radius: 50%;
+        border: 0.4rem solid var(--firster-color);
+    }
+    
+    .about-img img{
+        width: 230px;
+        height: 220px;
+        border-radius: 50%;
+        border: 0.8rem solid #fff;
+      
+    }
+    .about{
+        border: 1px solid red;
+       
+    }
+
     
   }
   @media screen  and (max-width: 500px){
@@ -555,6 +587,10 @@ color: var(--second-bg-color);
         color: #555;
         cursor: default;
        float: left;
+    }
+    section{
+        width: 100% !important;
+       
     }
     header{
         position: fixed;
@@ -565,6 +601,49 @@ color: var(--second-bg-color);
        
         background-color: #fff;
        
+    }
+    .img-container{
+        display: none;
+    }
+    
+    .content{
+        display: block;
+        margin-top: 160px;
+        margin-left: 30px;
+        margin-right: 10px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 0;
+       
+    }
+    .social-icons{
+        display: flex;
+        justify-content: center !important;
+        margin-left: 70px;
+        position: relative;
+        top: -360px;
+        bottom: 0px;
+        padding-left: 0px;
+    }
+   
+
+   
+    .social-icons a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: #180863;
+        border-radius: 50%;
+        margin-right: 22px;
+        text-align: center;
+        line-height: 35px;
+        border: 1px solid #fff;
+        outline: 2px solid rgb(24, 8, 99);
+    }
+    .btn-group a {
+        padding-top: 20px;
+        
     }
 
     
