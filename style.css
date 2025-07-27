@@ -93,6 +93,10 @@ header{
     color: #269ca0;
 }
   /* *************Home******************* */
+  /* .home{
+   background-image: linear-gradient( 177.6deg,  #0b013b 15.3%, rgba(1,0,62,1) 91.3% );
+  } */
+
 
 
 .content{
@@ -107,16 +111,25 @@ header{
    
 
 }
-.content h2{
+.content h1{
     font-size: 3em;
+    font-weight: bold;
 }
-.content h2 span{
+.content h1 span{
     color: #180863;
 }
-.content h3{
+.content h2{
     font-size: 2em;
     font-weight: bolder;
     color: var(--seconde-color);
+     font-weight: bold;
+  /* text-shadow: 0 0 5px #ffff,
+               0 0 10px #ffff,
+               0 0 20px #269ca0,
+               0 0 30px #269ca0,
+               0 0 40px #269ca0,
+               0 0 50px #269ca0,
+               0 0 60px #269ca0; */
 }
 
 .content p{
@@ -205,6 +218,7 @@ header{
 
 
 /* *************Pages  apropos******************* */
+
 .about {
     display: flex;
     justify-content: center;
@@ -351,118 +365,110 @@ header{
 
 
 /* ============Projets==================== */
-
-
-
 .portfolio h2 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
-
 
 .portfolio-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-   
-  }
-  .portfolio-box{
-    width: 30rem;
-    height: 20rem;
-    flex:  1 1 20rem;
-    padding: 0.4rem 0.1rem 0.9rem;
-    border-radius: 2rem;
-    text-align: center;
-    transition: .5s ease;
-    
-  }
-
-.portfolio-container .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 0.2rem #180863;
-    /* overflow: hidden; */
-    display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
+.portfolio-box {
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0.2rem #180863;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* aspect-ratio: 4 / 3; */
+  background-color: #fff;
+   height: 20rem; 
+   /* optionnel */
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+}
+
+/* Image de la box */
 .portfolio-box img {
-    width: 100%;
-    transition: .5s ease;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  transition: transform 0.5s ease;
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
-.portfolio-box{
-    position: relative;
-    overflow: hidden;
-}
-
-/* .portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: linear-gradient(rgba(0, 0, 0, .0));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
-} */
 
 .portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: linear-gradient(rgba(0, 0, 0, .0));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: transform .5s ease; /* Déplacer la propriété transition ici */
-    
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  border-radius: 2rem;
 }
 
-
 .portfolio-box:hover .portfolio-layer {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .portfolio-layer h4 {
-    font-size: 1.9rem;
+  font-size: 1.9rem;
+  color: #fff;
 }
 
 .portfolio-layer p {
-    font-size: 1rem;
-    margin: .3rem 0 1rem;
+  font-size: 1rem;
+  margin: 0.3rem 0 1rem;
+  color: #fff;
 }
 
 .portfolio-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    background: var(--text-color);
-    border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
 }
 
 .portfolio-layer a i {
-font-size: 1.8rem;
-color: var(--second-bg-color);
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* Responsive : 2 cards/tablette, 1 card/mobile */
+@media (max-width: 992px) {
+  .portfolio-box {
+    flex: 0 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-box {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
 }
 
 
